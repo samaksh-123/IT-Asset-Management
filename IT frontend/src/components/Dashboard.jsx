@@ -292,7 +292,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Fetch employee count
-    axios.get('http://localhost:5000/api/employees')
+    axios.get('https://it-asset-management-abb9.onrender.com/api/employees')
       .then(res => {
         if (Array.isArray(res.data)) {
           setTotalEmployees(res.data.length);
@@ -301,7 +301,7 @@ const Dashboard = () => {
       .catch(err => console.error("Failed to fetch employees:", err));
 
     // Fetch available assets and generate stats
-    axios.get('http://localhost:5000/api/assets')
+    axios.get('https://it-asset-management-abb9.onrender.com/api/assets')
       .then(res => {
         generateAssetStats(res.data);
       })
