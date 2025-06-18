@@ -1,0 +1,21 @@
+.view-container {
+  padding: 1rem;
+}
+
+.department-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.department-table th,
+.department-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.department-table th {
+  background-color: #3498db;
+  color: white;
+}

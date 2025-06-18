@@ -1,0 +1,147 @@
+/* .table-container {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+thead {
+  background-color: #000;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+p {
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+} */
+
+
+
+/* ViewAssets.css */
+/* 
+.table-container {
+  max-width: 95%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+/* .table-container h3 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 1.2rem;
+  color: #2c3e50;
+} */
+
+/* Filter styles */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters label {
+  font-weight: 600;
+  margin-right: 6px;
+  color: #333;
+}
+
+.filters select,
+.filters input[type="date"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  min-width: 140px;
+}
+
+/* Export button */
+/* .export-btn {
+  background-color:'#2980b9';
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  float: right;
+  width:auto;
+} */
+
+/* Table styling */
+.asset-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.asset-table th,
+.asset-table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.asset-table th {
+  background-color: #2980b9;
+  color: white;
+}
+
+.asset-table tr:hover td {
+  background-color: #f2f2f2;
+}
+
+/* Icon actions */
+.action-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-icons .fa-edit,
+.action-icons .fa-trash {
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+  color: #555;
+}
+
+.action-icons .fa-edit:hover {
+  color: green;
+  transform: scale(1.2);
+}
+
+.action-icons .fa-trash:hover {
+  color: crimson;
+  transform: scale(1.2);
+}
