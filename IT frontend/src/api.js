@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const API = axios.create({ baseURL: 'https://it-asset-management-2.onrender.com' });
 
 /* ------------------------ ASSET APIs ------------------------ */
 export const addAsset = (data) => API.post('/assets/add', data);
