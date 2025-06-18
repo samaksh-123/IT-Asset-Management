@@ -1091,7 +1091,7 @@ const ReturnAsset = () => {
 
   const fetchIssuedAssets = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/issued');
+      const res = await axios.get('https://it-asset-management-abb9.onrender.com/api/issued');
       setIssuedAssets(res.data);
     } catch (err) {
       console.error('Failed to fetch issued assets', err);
@@ -1135,7 +1135,7 @@ const ReturnAsset = () => {
           dateAdded: returnDate
         };
 
-        await axios.post('http://localhost:5000/api/assets', availableAssetPayload);
+        await axios.post('https://it-asset-management-abb9.onrender.com/api/assets', availableAssetPayload);
 
         alert('Asset returned to stock successfully');
       } else {
@@ -1150,12 +1150,12 @@ const ReturnAsset = () => {
           returnReason
         };
 
-        await axios.post('http://localhost:5000/api/returns', returnPayload);
+        await axios.post('https://it-asset-management-abb9.onrender.com/api/returns', returnPayload);
         alert('Asset marked as returned successfully');
       }
 
       // Remove from issued list
-      await axios.delete(`http://localhost:5000/api/issued/${selectedId}`);
+      await axios.delete(`https://it-asset-management-abb9.onrender.com/api/issued/${selectedId}`);
 
       // Reset form
       setSelectedId('');
