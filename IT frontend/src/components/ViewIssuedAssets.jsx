@@ -260,7 +260,7 @@
 
 
 import React, { useEffect, useState } from 'react';
-import { fetchIssuedAssets, updateIssuedAsset } from '../api';    // deleteIssuedAsset,
+import { fetchIssuedAssets } from '../api';    // deleteIssuedAsset, updateIssuedAsset
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import { exportToExcel } from '../utils/exportToExcel';
  
