@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import avatar from '../assets/avtar.png';
 import axios from 'axios';
@@ -17,7 +15,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Fetch employee count
-    axios.get('https://it-asset-management-2.onrender.com/api/employees')
+    axios.get('https://it-asset-management-u60k.onrender.com/api/employees')
       .then(res => {
         if (Array.isArray(res.data)) {
           setTotalEmployees(res.data.length);
@@ -26,7 +24,7 @@ const Dashboard = () => {
       .catch(err => console.error("Failed to fetch employees:", err));
 
     // Fetch available assets and generate stats
-    axios.get('https://it-asset-management-2.onrender.com/api/assets')
+    axios.get('https://it-asset-management-u60k.onrender.com/api/assets')
       .then(res => {
         generateAssetStats(res.data);
       })
@@ -110,3 +108,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
