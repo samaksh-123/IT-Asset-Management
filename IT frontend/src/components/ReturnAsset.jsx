@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -19,7 +17,7 @@ const ReturnAsset = () => {
 
   const fetchIssuedAssets = async () => {
     try {
-      const res = await axios.get('https://it-asset-management-2.onrender.com/api/issued');
+      const res = await axios.get('https://it-asset-management-u60k.onrender.com/api/issued');
       setIssuedAssets(res.data);
     } catch (err) {
       console.error('Failed to fetch issued assets', err);
@@ -56,14 +54,12 @@ const ReturnAsset = () => {
           type: assetToReturn.assetId?.type,
           serialNumber: assetToReturn.assetId?.serialNumber,
           configuration: assetToReturn.assetId?.configuration,
-        
           manufacturer: assetToReturn.assetId?.manufacturer,
-      
           status: 'In Stock',
           dateAdded: returnDate
         };
 
-        await axios.post('https://it-asset-management-2.onrender.com/api/assets', availableAssetPayload);
+        await axios.post('https://it-asset-management-u60k.onrender.com/api/assets', availableAssetPayload);
 
         alert('Asset returned to stock successfully');
       } else {
@@ -78,12 +74,12 @@ const ReturnAsset = () => {
           returnReason
         };
 
-        await axios.post('https://it-asset-management-2.onrender.com/api/returns', returnPayload);
+        await axios.post('https://it-asset-management-u60k.onrender.com/api/returns', returnPayload);
         alert('Asset marked as returned successfully');
       }
 
       // Remove from issued list
-      await axios.delete(`https://it-asset-management-2.onrender.com/api/issued/${selectedId}`);
+      await axios.delete(`https://it-asset-management-u60k.onrender.com/api/issued/${selectedId}`);
 
       // Reset form
       setSelectedId('');
@@ -94,7 +90,6 @@ const ReturnAsset = () => {
 
     } catch (err) {
       console.error('Error processing return:', err);
-      // alert('');                         //Failed to process return
     }
   };
 
@@ -159,6 +154,8 @@ const ReturnAsset = () => {
 };
 
 export default ReturnAsset;
+
+
 
 
 
