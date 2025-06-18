@@ -1,31 +1,31 @@
 import axios from 'axios';
 import App from './App';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const API = axios.create({ baseURL: 'https://it-asset-management-abb9.onrender.com' });
 
 export const addAsset = (data) => API.post('/assets/add', data);
 export const fetchAvailableAssets = () => API.get('/assets/available');
 
 
-export const deleteAsset = (id) => axios.delete(`http://localhost:5000/api/assets/${id}`);
-export const updateAsset = (id, data) => axios.put(`http://localhost:5000/api/assets/${id}`, data);
+// export const deleteAsset = (id) => axios.delete(`http://localhost:5000/api/assets/${id}`);
+// export const updateAsset = (id, data) => axios.put(`http://localhost:5000/api/assets/${id}`, data);
 
 export const issueAsset = (data) => {
-  return axios.post('http://localhost:5000/api/issued', data);
+  return axios.post('https://it-asset-management-abb9.onrender.com/api/issued', data);
 };
 
 ;
 export const fetchIssuedAssets = () => {
-  return axios.get('http://localhost:5000/api/issued');
+  return axios.get('https://it-asset-management-abb9.onrender.com/api/issued');
 };
 
 
 
-export const deleteIssuedAsset = (id) =>
-  axios.delete(`http://localhost:5000/api/issued/${id}`);
+// export const deleteIssuedAsset = (id) =>
+//   axios.delete(`http://localhost:5000/api/issued/${id}`);
 
-export const updateIssuedAsset = (id, updatedData) =>
-  axios.put(`http://localhost:5000/api/issued/${id}`, updatedData);
+// export const updateIssuedAsset = (id, updatedData) =>
+//   axios.put(`http://localhost:5000/api/issued/${id}`, updatedData);
 
 
 
