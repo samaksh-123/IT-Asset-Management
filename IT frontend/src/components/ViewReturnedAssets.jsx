@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import * as XLSX from 'xlsx';
@@ -19,7 +17,7 @@ const ViewReturnedAssets = () => {
 
   const fetchReturns = async () => {
     try {
-      const res = await axios.get('https://it-asset-management-2.onrender.com/api/returns');
+      const res = await axios.get('https://it-asset-management-u60k.onrender.com/api/returns');
       const data = Array.isArray(res.data) ? res.data : res.data.returns || [];
       setReturns(data);
       setFilteredReturns(data);
@@ -104,14 +102,15 @@ const ViewReturnedAssets = () => {
     saveAs(file, `Returned_Assets_${new Date().toISOString().split("T")[0]}.xlsx`);
   };
 
+  // Optional delete function can be re-enabled if needed
   // const handleDelete = async (id) => {
   //   const confirmDelete = window.confirm("Are you sure you want to delete this returned asset record?");
   //   if (!confirmDelete) return;
 
   //   try {
-  //     await axios.delete(`https://it-asset-management-2.onrender.com/api/returns/${id}`);
+  //     await axios.delete(`https://it-asset-management-u60k.onrender.com/api/returns/${id}`);
   //     alert("Deleted successfully.");
-  //     fetchReturns(); // Refresh list
+  //     fetchReturns();
   //   } catch (err) {
   //     console.error("Error deleting returned asset:", err);
   //     alert("Failed to delete record.");
@@ -212,7 +211,7 @@ const ViewReturnedAssets = () => {
                     style={{ color: '#555', cursor: 'pointer' }}
                     onClick={() => handleDelete(item._id)}
                     title="Delete record"
-                  /> 
+                  />
                 </td> */}
               </tr>
             ))
