@@ -1,171 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import './ViewDepartment.css';
-
-// const ViewDepartment = () => {
-//   const [departments, setDepartments] = useState([]);
-
-//   // Fetch departments from backend
-//   useEffect(() => {
-//     fetchDepartments();
-//   }, []);
-
-//   const fetchDepartments = async () => {
-//     try {
-//       const response = await axios.get('http://localhost:5000/api/departments'); // Update with your actual endpoint
-//       setDepartments(response.data);
-//     } catch (error) {
-//       console.error('Failed to fetch departments:', error);
-//     }
-//   };
-
-//   return (
-//     <div className="view-container">
-//       <h3>Departments List</h3>
-//       {departments.length > 0 ? (
-//         <table className="department-table">
-//           <thead>
-//             <tr>
-//               <th>Sr.No</th>
-//               <th>Department Name</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {departments.map((dept, index) => (
-//               <tr key={dept._id}>
-//                 <td>{index + 1}</td>
-//                 <td>{dept.name}</td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       ) : (
-//         <p>No departments found.</p>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ViewDepartment;
-
-
-
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import { FaEdit, FaTrash, FaSave, FaTimes } from 'react-icons/fa';
-
-// const ViewDepartment = () => {
-//   const [departments, setDepartments] = useState([]);
-//   const [editingId, setEditingId] = useState(null);
-//   const [editedName, setEditedName] = useState('');
-
-//   useEffect(() => {
-//     fetchDepartments();
-//   }, []);
-
-//   const fetchDepartments = async () => {
-//     try {
-//       const res = await axios.get('http://localhost:5000/api/departments');
-//       setDepartments(res.data);
-//     } catch (err) {
-//       console.error('Error fetching departments:', err);
-//     }
-//   };
-
-//   const handleDelete = async (id) => {
-//     if (window.confirm('Are you sure you want to delete this department?')) {
-//       try {
-//         await axios.delete(`http://localhost:5000/api/departments/${id}`);
-//         fetchDepartments();
-//       } catch (err) {
-//         console.error('Error deleting department:', err);
-//       }
-//     }
-//   };
-
-//   const handleEdit = (id, name) => {
-//     setEditingId(id);
-//     setEditedName(name);
-//   };
-
-//   const handleUpdate = async (id) => {
-//     try {
-//       await axios.put(`http://localhost:5000/api/departments/${id}`, { name: editedName });
-//       setEditingId(null);
-//       setEditedName('');
-//       fetchDepartments();
-//     } catch (err) {
-//       console.error('Error updating department:', err);
-//     }
-//   };
-
-//   return (
-//     <div className="view-container">
-//       <h3>Departments List</h3>
-//       {departments.length > 0 ? (
-//         <table className="department-table">
-//           <thead>
-//             <tr>
-//               <th>Serial NO.</th>
-//               <th>Department Name</th>
-//               <th>Actions</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {departments.map((dept, index) => (
-//               <tr key={dept._id}>
-//                 <td>{index + 1}</td>
-//                 <td>
-//                   {editingId === dept._id ? (
-//                     <input
-//                       value={editedName}
-//                       onChange={(e) => setEditedName(e.target.value)}
-//                       autoFocus
-//                     />
-//                   ) : (
-//                     dept.name
-//                   )}
-//                 </td>
-//                 <td>
-//                   {editingId === dept._id ? (
-//                     <>
-//                       <FaSave
-//                         onClick={() => handleUpdate(dept._id)}
-//                         style={{ cursor: 'pointer', marginRight: '10px', color: 'green' }}
-//                       />
-//                       <FaTimes
-//                         onClick={() => setEditingId(null)}
-//                         style={{ cursor: 'pointer', color: 'red' }}
-//                       />
-//                     </>
-//                   ) : (
-//                     <>
-//                       <FaEdit
-//                         onClick={() => handleEdit(dept._id, dept.name)}
-//                         style={{ cursor: 'pointer', marginRight: '10px', color: '#3498db' }}
-//                       />
-//                       <FaTrash
-//                         onClick={() => handleDelete(dept._id)}
-//                         style={{ cursor: 'pointer', color: 'crimson' }}
-//                       />
-//                     </>
-//                   )}
-//                 </td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       ) : (
-//         <p>No departments found.</p>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ViewDepartment;
-
-
-
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -184,7 +16,7 @@ const ViewDepartment = () => {
 
   const fetchDepartments = async () => {
     try {
-      const res = await axios.get('https://it-asset-management-abb9.onrender.com/api/departments');
+      const res = await axios.get('https://it-asset-management-2.onrender.com/api/departments');
       setDepartments(res.data);
     } catch (err) {
       console.error('Error fetching departments:', err);
@@ -194,7 +26,7 @@ const ViewDepartment = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this department?')) {
       try {
-        await axios.delete(`https://it-asset-management-abb9.onrender.com/api/departments/${id}`);
+        await axios.delete(`https://it-asset-management-2.onrender.com/api/departments/${id}`);
         fetchDepartments();
       } catch (err) {
         console.error('Error deleting department:', err);
@@ -209,7 +41,7 @@ const ViewDepartment = () => {
 
   const handleUpdate = async (id) => {
     try {
-      await axios.put(`https://it-asset-management-abb9.onrender.com/api/departments/${id}`, { name: editedName });
+      await axios.put(`https://it-asset-management-2.onrender.com/api/departments/${id}`, { name: editedName });
       setEditingId(null);
       setEditedName('');
       fetchDepartments();
