@@ -736,7 +736,7 @@ const ViewReturnedAssets = () => {
 
   const fetchReturns = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/returns');
+      const res = await axios.get('https://it-asset-management-abb9.onrender.com/api/returns');
       const data = Array.isArray(res.data) ? res.data : res.data.returns || [];
       setReturns(data);
       setFilteredReturns(data);
