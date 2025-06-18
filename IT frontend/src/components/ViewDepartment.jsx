@@ -184,7 +184,7 @@ const ViewDepartment = () => {
 
   const fetchDepartments = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/departments');
+      const res = await axios.get('https://it-asset-management-abb9.onrender.com/api/departments');
       setDepartments(res.data);
     } catch (err) {
       console.error('Error fetching departments:', err);
@@ -194,7 +194,7 @@ const ViewDepartment = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this department?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/departments/${id}`);
+        await axios.delete(`https://it-asset-management-abb9.onrender.com/api/departments/${id}`);
         fetchDepartments();
       } catch (err) {
         console.error('Error deleting department:', err);
@@ -209,7 +209,7 @@ const ViewDepartment = () => {
 
   const handleUpdate = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/departments/${id}`, { name: editedName });
+      await axios.put(`https://it-asset-management-abb9.onrender.com/api/departments/${id}`, { name: editedName });
       setEditingId(null);
       setEditedName('');
       fetchDepartments();
