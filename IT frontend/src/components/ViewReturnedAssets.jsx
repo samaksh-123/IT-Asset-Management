@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 // import * as XLSX from 'xlsx';
@@ -435,6 +436,8 @@
 
 // 🧩 FULL UPDATED FILE BELOW — includes dropdown + API call
 
+=======
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import * as XLSX from 'xlsx';
@@ -453,7 +456,7 @@ const ViewReturnedAssets = () => {
 
   const fetchReturns = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/returns');
+      const res = await axios.get('https://it-asset-management-u60k.onrender.com/api/returns');
       const data = Array.isArray(res.data) ? res.data : res.data.returns || [];
       setReturns(data);
       setFilteredReturns(data);
@@ -553,6 +556,24 @@ const ViewReturnedAssets = () => {
     saveAs(file, `Returned_Assets_${new Date().toISOString().split("T")[0]}.xlsx`);
   };
 
+<<<<<<< HEAD
+=======
+  // Optional delete function can be re-enabled if needed
+  // const handleDelete = async (id) => {
+  //   const confirmDelete = window.confirm("Are you sure you want to delete this returned asset record?");
+  //   if (!confirmDelete) return;
+
+  //   try {
+  //     await axios.delete(`https://it-asset-management-u60k.onrender.com/api/returns/${id}`);
+  //     alert("Deleted successfully.");
+  //     fetchReturns();
+  //   } catch (err) {
+  //     console.error("Error deleting returned asset:", err);
+  //     alert("Failed to delete record.");
+  //   }
+  // };
+
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
   return (
     <div>
       <h2>Returned Assets</h2>
@@ -644,6 +665,7 @@ const ViewReturnedAssets = () => {
                 <td>{item.remark || 'N/A'}</td>
                 <td>{formatDate(item.issuedDate)}</td>
                 <td>{formatDate(item.returnedDate)}</td>
+<<<<<<< HEAD
                 <td>
                   <select onChange={(e) => handleRepairAction(item._id, e.target.value)} defaultValue="">
                     <option value="">-- Select --</option>
@@ -651,6 +673,15 @@ const ViewReturnedAssets = () => {
                     <option value="scrap">Moved to Scrap</option>
                   </select>
                 </td>
+=======
+                {/* <td>
+                  <FaTrash
+                    style={{ color: '#555', cursor: 'pointer' }}
+                    onClick={() => handleDelete(item._id)}
+                    title="Delete record"
+                  />
+                </td> */}
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
               </tr>
             ))
           )}

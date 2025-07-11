@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 // import './ViewDepartment.css';
@@ -477,6 +478,8 @@
 
 
 
+=======
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FaEdit, FaTrash, FaSave, FaTimes } from 'react-icons/fa';
@@ -496,7 +499,7 @@ const ViewDepartment = () => {
 
   const fetchDepartments = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/departments');
+      const res = await axios.get('https://it-asset-management-u60k.onrender.com/api/departments');
       setDepartments(res.data);
     } catch (err) {
       console.error('Error fetching departments:', err);
@@ -506,7 +509,7 @@ const ViewDepartment = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this department?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/departments/${id}`);
+        await axios.delete(`https://it-asset-management-u60k.onrender.com/api/departments/${id}`);
         fetchDepartments();
       } catch (err) {
         console.error('Error deleting department:', err);
@@ -521,7 +524,7 @@ const ViewDepartment = () => {
 
   const handleUpdate = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/departments/${id}`, { name: editedName });
+      await axios.put(`https://it-asset-management-u60k.onrender.com/api/departments/${id}`, { name: editedName });
       setEditingId(null);
       setEditedName('');
       fetchDepartments();
@@ -550,10 +553,30 @@ const ViewDepartment = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="asset-page">
       <div className="department-header">
         <h3 className="center-heading">Departments List</h3>
         <button className="export-btn" onClick={exportToExcel}>Export to Excel</button>
+=======
+    <div className="view-container">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h3>Departments List</h3>
+        <button
+          onClick={exportToExcel}
+          style={{
+            padding: '6px 12px',
+            backgroundColor: '#2980b9',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            width: 'auto',
+          }}
+        >
+          Export to Excel
+        </button>
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
       </div>
 
       {departments.length > 0 ? (

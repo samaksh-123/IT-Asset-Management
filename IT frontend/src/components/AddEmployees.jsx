@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // import React, { useState, useEffect } from 'react';
 // import { addEmployee, fetchDepartments } from '../api';
@@ -86,6 +87,8 @@
 // export default AddEmployee;
 
 
+=======
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 
 import React, { useState, useEffect } from 'react';
 import { addEmployee, fetchDepartments } from '../api';

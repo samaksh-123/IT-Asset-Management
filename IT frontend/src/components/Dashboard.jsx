@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -466,6 +467,8 @@
 
 
 
+=======
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 import React, { useEffect, useState } from 'react';
 import avatar from '/assets/avtar.png';
 import logo from '/assets/oc.jpg'; // For loading screen
@@ -485,8 +488,23 @@ const Dashboard = () => {
   const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
+<<<<<<< HEAD
     axios.get('http://localhost:5000/api/assets')
       .then((res) => {
+=======
+    // Fetch employee count
+    axios.get('https://it-asset-management-u60k.onrender.com/api/employees')
+      .then(res => {
+        if (Array.isArray(res.data)) {
+          setTotalEmployees(res.data.length);
+        }
+      })
+      .catch(err => console.error("Failed to fetch employees:", err));
+
+    // Fetch available assets and generate stats
+    axios.get('https://it-asset-management-u60k.onrender.com/api/assets')
+      .then(res => {
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
         generateAssetStats(res.data);
       })
       .catch(console.error)
@@ -569,3 +587,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+

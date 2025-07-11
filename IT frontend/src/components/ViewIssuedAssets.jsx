@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useEffect, useState } from 'react';
 // import { fetchIssuedAssets, deleteIssuedAsset, updateIssuedAsset } from '../api';
 // import { FaEdit, FaTrash } from 'react-icons/fa';
@@ -260,6 +261,12 @@
 
 import React, { useEffect, useState } from 'react';
 import { fetchIssuedAssets } from '../api';
+=======
+
+import React, { useEffect, useState } from 'react';
+import { fetchIssuedAssets } from '../api';    // deleteIssuedAsset, updateIssuedAsset
+import { FaEdit, FaTrash } from 'react-icons/fa';
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 import { exportToExcel } from '../utils/exportToExcel';
 
 const ViewIssuedAssets = () => {

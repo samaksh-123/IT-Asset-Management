@@ -1,6 +1,5 @@
-// import React, { useState } from 'react';
-// import { addAsset } from '../api';
 
+<<<<<<< HEAD
 // const AddAssetForm = () => {
 //   const [form, setForm] = useState({
 //     type: '',
@@ -628,6 +627,8 @@
 // };
 
 // export default AddAssetForm;
+=======
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 
 
 

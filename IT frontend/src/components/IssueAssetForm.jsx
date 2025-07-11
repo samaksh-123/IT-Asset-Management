@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useState, useEffect } from 'react';
 // import { issueAsset, fetchEmployees, fetchDepartments, fetchAvailableAssets } from '../api';
 
@@ -681,6 +682,8 @@
 // export default IssueAssetForm;
 
 
+=======
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 
 import React, { useState, useEffect } from 'react';
 import './AddDepartment';

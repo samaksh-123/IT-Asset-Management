@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useEffect, useState } from 'react';
 // import { fetchDepartments, fetchEmployees, deleteEmployee } from '../api';
 // import { FaTrash } from 'react-icons/fa';
@@ -135,6 +136,8 @@
 
 // export default ViewEmployees;
 
+=======
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 
 import React, { useEffect, useState } from 'react';
 import { fetchDepartments, fetchEmployees, deleteEmployee } from '../api';

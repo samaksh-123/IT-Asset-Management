@@ -1,20 +1,15 @@
+<<<<<<< HEAD
 // import React, { useEffect, useState } from 'react';
 // import { fetchAvailableAssets  } from '../api';   //deleteAsset, updateAsset
 //  import './ViewAssets.css';
 // import { FaEdit, FaTrash } from 'react-icons/fa';
 // import { exportToExcel } from '../utils/exportToExcel';
+=======
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 
-// const ViewAssets = () => {
-//   const [assets, setAssets] = useState([]);
-//   const [filteredAssets, setFilteredAssets] = useState([]);
-//   const [selectedType, setSelectedType] = useState('');
-//   const [selectedDateFilter, setSelectedDateFilter] = useState('');
-//   const [customDate, setCustomDate] = useState('');
 
-//   useEffect(() => {
-//     loadAssets();
-//   }, []);
 
+<<<<<<< HEAD
 //   const loadAssets = () => {
 //     fetchAvailableAssets()
 //       .then(res => {
@@ -445,6 +440,8 @@
 // };
 
 // export default ViewAssets;
+=======
+>>>>>>> 2d920c62cdeaed0d6acd96db3e6daeadf4a0e46d
 
 
 import React, { useEffect, useState } from 'react';
