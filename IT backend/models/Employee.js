@@ -23,7 +23,12 @@ const employeeSchema = new mongoose.Schema({
   location: {
     type: String,
     required: true
-  }
+  },
+  employeeId: {
+    type: String,
+    required: true,
+    unique: true
+  },
 });
 
 module.exports = mongoose.model('Employee', employeeSchema);

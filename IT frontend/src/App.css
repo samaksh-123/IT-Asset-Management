@@ -2,7 +2,7 @@
 
 
 
-body {
+/* body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -89,8 +89,8 @@ body {
   border-radius: 8px;
   box-sizing: border-box;
   /* transition: border-color 0.2s; */
-}
 
+/* 
 .form input:focus,
 .form select:focus {
   border-color: #3498db;
@@ -143,4 +143,257 @@ table td {
 
 table tbody tr:hover {
   background: #f1f1f1;
+}
+
+
+
+.form-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+}
+.form-container h2 {
+  text-align: center;
+}
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+.form-container button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}  */
+
+
+/* Reset and base styles */
+
+
+
+
+/* Reset and base styles */
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #dfe9f3, #ffffff);
+  background-image: url('/assets/oc logo.jpg'); /* Add your custom image here */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+/* App Layout */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  animation: slideInLeft 0.6s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.sidebar h2,
+.sidebar h3 {
+  color: #f1eadf;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 12px 0;
+  padding: 10px;
+  background: #34495e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar li:hover {
+  background: #3d566e;
+  transform: scale(1.03);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.5s ease;
+  overflow-y: auto;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Card */
+.form {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  max-width: 520px;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.form:hover {
+  transform: scale(1.01);
+}
+
+.form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Form Inputs */
+.form input,
+.form select {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s, box-shadow 0.2s;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(41, 128, 185, 0.3);
+}
+
+/* Table Styling */
+.table-container {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  animation: fadeIn 0.4s ease;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+table thead {
+  background: #2980b9;
+  color: white;
+}
+
+table th,
+table td {
+  padding: 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table tbody tr:hover {
+  background: #f1f1f1;
+}
+
+/* Login/Register Form Container */
+.form-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-container button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+  background: #34495e;
 }

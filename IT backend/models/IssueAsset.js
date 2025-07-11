@@ -10,5 +10,3 @@ const issueSchema = new mongoose.Schema({
 
 module.exports = mongoose.model('Issue', issueSchema);
 
-
-

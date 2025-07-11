@@ -1,0 +1,31 @@
+.page-container {
+  min-height: 100vh;
+  background: url('/assets/ocpl.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(rgba(0, 255, 255, 0.04), transparent 70%),
+              radial-gradient(rgba(255, 0, 255, 0.04), transparent 70%);
+  opacity: 0.08;
+  animation: floatingParticles 30s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes floatingParticles {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(40%, 40%) rotate(360deg); }
+}

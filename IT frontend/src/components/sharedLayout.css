@@ -1,0 +1,58 @@
+/* sharedLayout.css */
+.asset-page {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: fadeIn 1s ease;
+  color: #fff;
+}
+
+.asset-page::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background-size: cover;
+  opacity: 0.08;
+  animation: rotateBg 120s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.asset-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(rgba(0, 255, 255, 0.08), transparent 70%),
+    radial-gradient(rgba(255, 0, 255, 0.06), transparent 70%);
+  opacity: 0.12;
+  animation: floatingParticles 40s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes rotateBg {
+  0% { transform: rotate(0deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1.05); }
+}
+
+@keyframes floatingParticles {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(40%, 40%) rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
