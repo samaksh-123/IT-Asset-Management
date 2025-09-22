@@ -52,7 +52,8 @@ const assetSchema = new mongoose.Schema({
   issued: {
     type: Boolean,
     default: false
-  }
+  },
+   invoiceFile: String // ✅ store filename/path of uploaded PDF
 });
 
 module.exports = mongoose.model('Asset', assetSchema);
